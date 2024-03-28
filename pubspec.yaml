@@ -16,4 +16,37 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
+  fonts:
+    - family: HelveticaNeue
+      fonts:
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueBold.otf
+          weight: 600
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueBoldItalic.otf
+          style: italic
+          weight: 600
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueMedium.otf
+          weight: 500
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueMediumItalic.otf
+          style: italic
+          weight: 500
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueRoman.otf
+          weight: 400
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueItalic.ttf
+          weight: 400
+          style: italic
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueLight.otf
+          weight: 300
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueLightItalic.otf
+          style: italic
+          weight: 300
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueThin.otf
+          weight: 200
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueThinItalic.otf
+          style: italic
+          weight: 200
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueUltraLight.otf
+          weight: 100
+        - asset: lib/assets/fonts/HelveticaNeue/HelveticaNeueUltraLightItalic.otf
+          style: italic
+          weight: 100
   uses-material-design: true
