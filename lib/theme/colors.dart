@@ -8,6 +8,8 @@ class AppColors {
   static const Color additionalGreen = Color(0xFF7CCB5D);
   static const Color additionalRed = Color(0xFFFF6868);
   static const Color additionalYellow = Color(0xFFF9DD4B);
+  static const Color whiteColor = Colors.white;
+  static const Color blackColor = Colors.black;
 
   static const LinearGradient linearGradient = LinearGradient(
       begin: Alignment.topLeft,
