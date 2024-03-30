@@ -7,12 +7,14 @@ class AuthButton extends StatelessWidget {
   final double? width;
   final double? height;
   final TextStyle? labelStyle;
+  final VoidCallback? onPressed;
   const AuthButton(
       {super.key,
       required this.label,
       this.width,
       this.height,
-      this.labelStyle});
+      this.labelStyle,
+      this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class AuthButton extends StatelessWidget {
           UiSizes.heightPercent(height ?? 7),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed ?? () {},
       child: Text(label,
           style: labelStyle ?? Theme.of(context).textTheme.labelSmall),
     );
