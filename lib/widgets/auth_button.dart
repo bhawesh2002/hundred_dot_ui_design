@@ -21,7 +21,7 @@ class AuthButton extends StatelessWidget {
         backgroundColor: AppColors.primary2,
         minimumSize: Size(
           UiSizes.widthPercent(width ?? 93),
-          UiSizes.heightPercent(height ?? 6),
+          UiSizes.heightPercent(height ?? 7),
         ),
       ),
       onPressed: () {},
