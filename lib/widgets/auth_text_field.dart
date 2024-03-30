@@ -5,7 +5,9 @@ import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 class AuthTextfield extends StatelessWidget {
   final String hintText;
   final TextInputType? inputType;
-  const AuthTextfield({super.key, required this.hintText, this.inputType});
+  final bool? obscureText;
+  const AuthTextfield(
+      {super.key, required this.hintText, this.inputType, this.obscureText});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class AuthTextfield extends StatelessWidget {
       ),
       child: Center(
         child: TextField(
+          obscureText: obscureText ?? false,
           textAlign: TextAlign.center,
           keyboardType: inputType ?? TextInputType.text,
           decoration: InputDecoration(
