@@ -7,6 +7,8 @@ class AuthButton extends StatelessWidget {
   final double? width;
   final double? height;
   final TextStyle? labelStyle;
+  final Color? labelColor;
+  final Color? buttonColor;
   final VoidCallback? onPressed;
   const AuthButton(
       {super.key,
@@ -14,21 +16,28 @@ class AuthButton extends StatelessWidget {
       this.width,
       this.height,
       this.labelStyle,
-      this.onPressed});
+      this.onPressed,
+      this.labelColor,
+      this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        backgroundColor: AppColors.primary2,
+        backgroundColor: buttonColor ?? AppColors.primary2,
         minimumSize: Size(
           UiSizes.widthPercent(width ?? 93),
           UiSizes.heightPercent(height ?? 7),
         ),
       ),
       onPressed: onPressed ?? () {},
-      child: Text(label,
-          style: labelStyle ?? Theme.of(context).textTheme.labelSmall),
+      child: Text(
+        label,
+        style: labelStyle ??
+            Theme.of(context).textTheme.labelSmall?.copyWith(
+                  color: labelColor,
+                ),
+      ),
     );
   }
 }
