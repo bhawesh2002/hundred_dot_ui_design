@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hundred_dot_ui_design/pages/login.dart';
+import 'package:hundred_dot_ui_design/pages/login/login.dart';
 import 'package:hundred_dot_ui_design/pages/signup/signup.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
