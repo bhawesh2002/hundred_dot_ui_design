@@ -23,7 +23,7 @@ class CategoreyListTile extends StatelessWidget {
           UiSizes.widthPercent(8),
         ),
         child: Container(
-          height: UiSizes.heightPercent(7),
+          height: UiSizes.heightPercent(6.5),
           padding: EdgeInsets.symmetric(
             horizontal: UiSizes.widthPercent(8),
           ),
@@ -44,6 +44,7 @@ class CategoreyListTile extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppColors.blackColor,
                       fontSize: UiSizes.widthPercent(3),
+                      fontWeight: FontWeight.w500,
                     ),
               ),
             ],
