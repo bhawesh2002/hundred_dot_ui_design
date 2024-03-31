@@ -28,6 +28,8 @@ flutter:
     - lib/assets/icons/info.svg
     - lib/assets/icons/credit_card.svg
     - lib/assets/icons/location_pin.svg
+    - lib/assets/icons/notification_unread.svg
+    - lib/assets/icons/signin.svg
   fonts:
     - family: HelveticaNeue
       fonts:
