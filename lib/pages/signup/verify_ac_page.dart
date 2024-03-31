@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hundred_dot_ui_design/pages/verify_ac_page.dart';
+import 'package:hundred_dot_ui_design/pages/signup/about_yourself_page.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/auth_button.dart';
 import 'package:hundred_dot_ui_design/widgets/auth_text_field.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class VerifyAccountPage extends StatelessWidget {
+  const VerifyAccountPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +27,8 @@ class SignupPage extends StatelessWidget {
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "We Are Happy!",
+                  "Verify\nYour Account",
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(),
-                ),
-              ),
-            ),
-            Positioned.fill(
-              top: UiSizes.heightPercent(20),
-              left: UiSizes.widthPercent(6),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "We Are Happy That youre\njoining our family!",
-                  style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),
             ),
@@ -53,19 +42,19 @@ class SignupPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const AuthTextfield(
-                        hintText: "Enter Your Phone Number",
-                        inputType: TextInputType.phone,
+                        hintText: "Confirm Your Code",
+                        inputType: TextInputType.number,
                       ),
                       AuthButton(
-                        label: "Send Code",
+                        label: "Continue",
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const VerifyAccountPage(),
+                              builder: (context) => const AboutYourselfPage(),
                             ),
                           );
                         },
-                      )
+                      ),
                     ],
                   ),
                 ),
