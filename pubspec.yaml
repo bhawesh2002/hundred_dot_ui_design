@@ -30,6 +30,8 @@ flutter:
     - lib/assets/icons/location_pin.svg
     - lib/assets/icons/notification_unread.svg
     - lib/assets/icons/signin.svg
+    - lib/assets/icons/plus.svg
+    - lib/assets/icons/filter.svg
   fonts:
     - family: HelveticaNeue
       fonts:
