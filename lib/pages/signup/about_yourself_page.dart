@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_dot_ui_design/pages/home.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/auth_button.dart';
@@ -37,13 +38,22 @@ class AboutYourselfPage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: SizedBox(
                 height: UiSizes.heightPercent(35),
-                child: const Column(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AuthTextfield(hintText: "Your Name"),
-                    AuthTextfield(hintText: "Your Last Name"),
-                    AuthTextfield(hintText: "Confirm Your Password"),
-                    AuthButton(label: "Send Code"),
+                    const AuthTextfield(hintText: "Your Name"),
+                    const AuthTextfield(hintText: "Your Last Name"),
+                    const AuthTextfield(hintText: "Confirm Your Password"),
+                    AuthButton(
+                      label: "Send Code",
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

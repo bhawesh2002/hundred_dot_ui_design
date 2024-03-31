@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_dot_ui_design/pages/home.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/auth_button.dart';
@@ -48,18 +49,27 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
                   height: UiSizes.heightPercent(25),
-                  child: const Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AuthTextfield(
+                      const AuthTextfield(
                         hintText: "Phone Number",
                         inputType: TextInputType.phone,
                       ),
-                      AuthTextfield(
+                      const AuthTextfield(
                         hintText: "Password",
                         obscureText: true,
                       ),
-                      AuthButton(label: "Continue"),
+                      AuthButton(
+                        label: "Continue",
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
