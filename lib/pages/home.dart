@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 244, 244, 244),
+        backgroundColor: AppColors.scaffoldBgColor,
         body: bottomNavItems.keys.elementAt(selectedIndex),
         bottomNavigationBar: Container(
           height: UiSizes.heightPercent(8),
