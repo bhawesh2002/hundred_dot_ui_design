@@ -17,6 +17,17 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
+  assets:
+    - lib/assets/icons/phone.svg
+    - lib/assets/icons/money.svg
+    - lib/assets/icons/transfer.svg
+    - lib/assets/icons/ligntning_boult.svg
+    - lib/assets/icons/full_screen.svg
+    - lib/assets/icons/heart.svg
+    - lib/assets/icons/home.svg
+    - lib/assets/icons/info.svg
+    - lib/assets/icons/credit_card.svg
+    - lib/assets/icons/location_pin.svg
   fonts:
     - family: HelveticaNeue
       fonts:
