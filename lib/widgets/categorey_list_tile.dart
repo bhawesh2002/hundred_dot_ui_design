@@ -6,8 +6,9 @@ import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 class CategoreyListTile extends StatelessWidget {
   final String label;
   final String svgIconPath;
+  final VoidCallback? onTap;
   const CategoreyListTile(
-      {super.key, required this.label, required this.svgIconPath});
+      {super.key, required this.label, required this.svgIconPath, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class CategoreyListTile extends StatelessWidget {
         UiSizes.widthPercent(8),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: onTap ?? () {},
         borderRadius: BorderRadius.circular(
           UiSizes.widthPercent(8),
         ),
