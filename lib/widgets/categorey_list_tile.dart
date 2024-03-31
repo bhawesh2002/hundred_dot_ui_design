@@ -23,10 +23,9 @@ class CategoreyListTile extends StatelessWidget {
           UiSizes.widthPercent(8),
         ),
         child: Container(
-          width: UiSizes.widthPercent(90),
           height: UiSizes.heightPercent(7),
           padding: EdgeInsets.symmetric(
-            horizontal: UiSizes.widthPercent(10),
+            horizontal: UiSizes.widthPercent(8),
           ),
           child: Row(
             children: [
