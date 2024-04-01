@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hundred_dot_ui_design/pages/home.dart';
+import 'package:hundred_dot_ui_design/pages/onboarding/onboarding.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'HelveticaNeue',
       ),
-      home: const HomePage(),
+      home: const OnBoardingScreen(),
     );
   }
 }
