@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/categorey_list_tile.dart';
@@ -9,12 +10,26 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, String> categoryItems = {
-      "Utility": "lib/assets/icons/ligntning_boult.svg",
-      "Account Balance": "lib/assets/icons/ligntning_boult.svg",
-      "QR Code": "lib/assets/icons/full_screen.svg",
-      "Charity": "lib/assets/icons/heart.svg",
-    };
+    List<CategoryItem> categoryItems = [
+      const CategoryItem(
+          label: "Utility",
+          svgIconPath: "lib/assets/icons/ligntning_boult.svg"),
+      const CategoryItem(
+        label: "Account Balance",
+        svgIconPath: "lib/assets/icons/ligntning_boult.svg",
+        navigationPage: AccountBalancePage(),
+      ),
+      const CategoryItem(
+          label: "QR Code", svgIconPath: "lib/assets/icons/full_screen.svg"),
+      const CategoryItem(
+          label: "Charity", svgIconPath: "lib/assets/icons/heart.svg")
+    ];
+    // Map<String, String> categoryItems = {
+    //   "Utility": "lib/assets/icons/ligntning_boult.svg",
+    //   "Account Balance": "lib/assets/icons/ligntning_boult.svg",
+    //   "QR Code": "lib/assets/icons/full_screen.svg",
+    //   "Charity": "lib/assets/icons/heart.svg",
+    // };
     return Center(
       child: Column(
         children: [
@@ -86,8 +101,8 @@ class HomeBody extends StatelessWidget {
                     vertical: UiSizes.heightPercent(1),
                   ),
                   child: CategoreyListTile(
-                      label: categoryItems.keys.elementAt(index),
-                      svgIconPath: categoryItems.values.elementAt(index)),
+                    categoryItem: categoryItems[index],
+                  ),
                 );
               }),
             ),
@@ -96,4 +111,13 @@ class HomeBody extends StatelessWidget {
       ),
     );
   }
+}
+
+class CategoryItem {
+  final String label;
+  final String svgIconPath;
+  final Widget? navigationPage;
+
+  const CategoryItem(
+      {required this.label, required this.svgIconPath, this.navigationPage});
 }

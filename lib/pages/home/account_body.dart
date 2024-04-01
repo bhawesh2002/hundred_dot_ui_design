@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/categorey_list_tile.dart';
@@ -9,6 +10,19 @@ class AccountBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<CategoryItem> acPageOptionsList = [
+      const CategoryItem(
+          label: "My Account", svgIconPath: "lib/assets/icons/signin.svg"),
+      const CategoryItem(
+          label: "Scores", svgIconPath: "lib/assets/icons/signin.svg"),
+      const CategoryItem(
+          label: "Support", svgIconPath: "lib/assets/icons/signin.svg"),
+      const CategoryItem(
+          label: "Privacy and Policy",
+          svgIconPath: "lib/assets/icons/signin.svg"),
+      const CategoryItem(
+          label: "About Us", svgIconPath: "lib/assets/icons/signin.svg")
+    ];
     Map<String, String> acPageOptions = {
       "My Account": "lib/assets/icons/signin.svg",
       "Scores": "lib/assets/icons/signin.svg",
@@ -95,8 +109,8 @@ class AccountBody extends StatelessWidget {
                     vertical: UiSizes.heightPercent(1),
                   ),
                   child: CategoreyListTile(
-                      label: acPageOptions.keys.elementAt(index),
-                      svgIconPath: acPageOptions.values.elementAt(index)),
+                    categoryItem: acPageOptionsList[index],
+                  ),
                 );
               }),
             ),

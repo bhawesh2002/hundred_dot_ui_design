@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 
 class CategoreyListTile extends StatelessWidget {
-  final String label;
-  final String svgIconPath;
-  final VoidCallback? onTap;
-  const CategoreyListTile(
-      {super.key, required this.label, required this.svgIconPath, this.onTap});
+  final CategoryItem categoryItem;
+  const CategoreyListTile({super.key, required this.categoryItem});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,14 @@ class CategoreyListTile extends StatelessWidget {
         UiSizes.widthPercent(8),
       ),
       child: InkWell(
-        onTap: onTap ?? () {},
+        onTap: categoryItem.navigationPage == null
+            ? () {}
+            : () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (context) => categoryItem.navigationPage!),
+                );
+              },
         borderRadius: BorderRadius.circular(
           UiSizes.widthPercent(8),
         ),
@@ -30,7 +35,7 @@ class CategoreyListTile extends StatelessWidget {
           child: Row(
             children: [
               SvgPicture.asset(
-                svgIconPath,
+                categoryItem.svgIconPath,
                 width: 25,
                 height: 25,
                 // ignore: deprecated_member_use
@@ -40,7 +45,7 @@ class CategoreyListTile extends StatelessWidget {
                 dimension: UiSizes.widthPercent(6),
               ),
               Text(
-                label,
+                categoryItem.label,
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppColors.blackColor,
                       fontSize: UiSizes.widthPercent(3),
