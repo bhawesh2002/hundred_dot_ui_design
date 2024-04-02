@@ -53,13 +53,13 @@ class MapPinBody extends StatelessWidget {
                 SizedBox(
                   width: UiSizes.widthPercent(5),
                 ),
-                const Expanded(
+                Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Search the Area",
                       hintStyle: TextStyle(
-                        color: Colors.grey,
-                      ),
+                          color: Colors.grey,
+                          fontSize: UiSizes.widthPercent(4)),
                     ),
                   ),
                 )
