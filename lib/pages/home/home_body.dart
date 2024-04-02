@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.dart';
+import 'package:hundred_dot_ui_design/pages/home/other/phone_bill.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/categorey_list_tile.dart';
@@ -50,24 +51,28 @@ class HomeBody extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: UiSizes.widthPercent(8)),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconNLabel(
+                const IconNLabel(
                   svgPath: 'lib/assets/icons/phone.svg',
                   label: "Charge",
                 ),
-                IconNLabel(
+                const IconNLabel(
                   svgPath: 'lib/assets/icons/phone.svg',
                   label: "Internet",
                 ),
-                IconNLabel(
+                const IconNLabel(
                   svgPath: 'lib/assets/icons/transfer.svg',
                   label: "Transfer",
                 ),
                 IconNLabel(
                   svgPath: 'lib/assets/icons/money.svg',
                   label: "Bill",
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const PhoneBillPage()));
+                  },
                 ),
               ],
             ),
