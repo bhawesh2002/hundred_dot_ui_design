@@ -31,8 +31,8 @@ class AuthTextfield extends StatelessWidget {
           textAlign: TextAlign.center,
           keyboardType: inputType ?? TextInputType.text,
           decoration: InputDecoration(
-            hintText: hintText,
-          ),
+              hintText: hintText,
+              hintStyle: TextStyle(fontSize: UiSizes.widthPercent(4))),
         ),
       ),
     );
