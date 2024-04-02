@@ -25,7 +25,6 @@ class PhoneChargePage extends StatelessWidget {
             ),
             const PhoneChargeTextField(
               hintText: "Add Phone Number",
-              textInputType: TextInputType.phone,
             ),
             SizedBox(
               height: UiSizes.heightPercent(4),
@@ -81,7 +80,6 @@ class PhoneChargePage extends StatelessWidget {
             ),
             const PhoneChargeTextField(
               hintText: "Type Charge Amount : \$",
-              textInputType: TextInputType.phone,
             ),
             SizedBox(
               height: UiSizes.heightPercent(3),
@@ -159,9 +157,7 @@ class PhoneChargePage extends StatelessWidget {
 
 class PhoneChargeTextField extends StatelessWidget {
   final String hintText;
-  final TextInputType textInputType;
-  const PhoneChargeTextField(
-      {super.key, required this.hintText, required this.textInputType});
+  const PhoneChargeTextField({super.key, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +178,7 @@ class PhoneChargeTextField extends StatelessWidget {
       child: Center(
         child: TextField(
           textAlign: TextAlign.center,
-          keyboardType: textInputType,
+          keyboardType: TextInputType.phone,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextStyle(
