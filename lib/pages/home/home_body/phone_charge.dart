@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/phone_charge_payment.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/screen_app_bar.dart';
@@ -89,7 +89,10 @@ class PhoneChargePage extends StatelessWidget {
                   UiSizes.heightPercent(6),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const PhoneChargePaymentPage()));
+              },
               child: Text(
                 "Confirm",
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
