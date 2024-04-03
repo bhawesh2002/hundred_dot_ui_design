@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_dot_ui_design/pages/home/card_body/payment.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/friends_list_tile.dart';
 
@@ -7,14 +8,14 @@ class CardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, String> friendList = {
-      "Peter Parker": "6453 6531 6862 5422",
-      "Simone Simonas": " 7835 3135 3515 3516",
-      "Selena Kayle": "6484 2683 6866 4312",
-      "Andy Bahamak": "6843 6423 4656 1832",
-      "Sthepene Graandnote": "8674 3516 6535 5633",
-      "Wanda Maximoff": "8973 5312 3546 8432",
-    };
+    List<Friend> friendList = [
+      Friend(name: "Peter Parker", cardNo: "6453 6531 6862 5422"),
+      Friend(name: "Simone Simonas", cardNo: "7835 3135 3515 3516"),
+      Friend(name: "Selena Kayle", cardNo: "6484 2683 6866 4312"),
+      Friend(name: "Andy Bahamak", cardNo: "6843 6423 4656 1832"),
+      Friend(name: "Sthepene Graandnote", cardNo: "8674 3516 6535 5633"),
+      Friend(name: "Wanda Maximoff", cardNo: "8973 5312 3546 8432")
+    ];
     return Center(
       child: Column(
         children: [
@@ -84,8 +85,14 @@ class CardBody extends StatelessWidget {
                     vertical: UiSizes.heightPercent(1),
                   ),
                   child: FriendListTile(
-                    friendName: friendList.keys.elementAt(index),
-                    cardNumber: friendList.values.elementAt(index),
+                    friendName: friendList[index].name,
+                    cardNumber: friendList[index].cardNo,
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => PaymentPage(
+                                friend: friendList[index],
+                              )));
+                    },
                   ),
                 );
               }),
@@ -95,4 +102,10 @@ class CardBody extends StatelessWidget {
       ),
     );
   }
+}
+
+class Friend {
+  final String name;
+  final String cardNo;
+  Friend({required this.name, required this.cardNo});
 }
