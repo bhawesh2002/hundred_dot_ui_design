@@ -77,7 +77,8 @@ class PhoneChargePaymentPage extends StatelessWidget {
                 child: Center(
                   child: TextField(
                     textAlign: TextAlign.center,
-                    keyboardType: TextInputType.phone,
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Enter Password",
                       hintStyle: TextStyle(
@@ -97,10 +98,7 @@ class PhoneChargePaymentPage extends StatelessWidget {
                     UiSizes.heightPercent(6),
                   ),
                 ),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const PhoneChargePaymentPage()));
-                },
+                onPressed: () {},
                 child: Text(
                   "Confirm",
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
