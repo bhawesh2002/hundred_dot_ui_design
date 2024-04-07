@@ -29,7 +29,7 @@ class CharityListTile extends StatelessWidget {
         child: Container(
           height: UiSizes.heightPercent(6.5),
           padding: EdgeInsets.symmetric(
-            horizontal: UiSizes.widthPercent(8),
+            horizontal: UiSizes.widthPercent(5),
           ),
           child: Row(
             children: [
@@ -52,8 +52,8 @@ class CharityListTile extends StatelessWidget {
                 charityDetails.charityName,
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppColors.blackColor,
-                      fontSize: UiSizes.widthPercent(3),
-                      fontWeight: FontWeight.w500,
+                      fontSize: UiSizes.widthPercent(3.5),
+                      fontWeight: FontWeight.bold,
                     ),
               ),
             ],
