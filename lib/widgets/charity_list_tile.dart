@@ -53,7 +53,7 @@ class CharityListTile extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                       color: AppColors.blackColor,
                       fontSize: UiSizes.widthPercent(3.5),
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                     ),
               ),
             ],
