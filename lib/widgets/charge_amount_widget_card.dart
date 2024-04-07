@@ -46,7 +46,10 @@ class ChargeAmountWidgetCard extends StatelessWidget {
                 children: List.generate(
                   6,
                   (index) => Center(
-                    child: Text("\$${amount[index]}"),
+                    child: Text(
+                      "\$${amount[index]}",
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               )
