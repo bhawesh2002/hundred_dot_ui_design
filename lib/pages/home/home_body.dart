@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/charity_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_bill.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_charge.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
@@ -24,7 +25,9 @@ class HomeBody extends StatelessWidget {
       const CategoryItem(
           label: "QR Code", svgIconPath: "lib/assets/icons/full_screen.svg"),
       const CategoryItem(
-          label: "Charity", svgIconPath: "lib/assets/icons/heart.svg")
+          label: "Charity",
+          svgIconPath: "lib/assets/icons/heart.svg",
+          navigationPage: CharityPage())
     ];
     // Map<String, String> categoryItems = {
     //   "Utility": "lib/assets/icons/ligntning_boult.svg",
