@@ -32,7 +32,7 @@ class CharityPage extends StatelessWidget {
             children: [
               const ScreenAppBar(title: "Charity"),
               SizedBox(
-                height: UiSizes.heightPercent(4),
+                height: UiSizes.heightPercent(3),
               ),
               const ChargeAmountWidgetCard(hintText: "Type Amount"),
               SizedBox(
