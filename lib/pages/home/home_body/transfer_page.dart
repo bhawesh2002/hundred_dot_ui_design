@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/screen_app_bar.dart';
