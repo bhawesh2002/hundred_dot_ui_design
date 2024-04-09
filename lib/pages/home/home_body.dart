@@ -3,6 +3,7 @@ import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.
 import 'package:hundred_dot_ui_design/pages/home/home_body/charity_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_bill.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_charge.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/transfer_page.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
 import 'package:hundred_dot_ui_design/widgets/categorey_list_tile.dart';
@@ -70,9 +71,13 @@ class HomeBody extends StatelessWidget {
                   svgPath: 'lib/assets/icons/phone.svg',
                   label: "Internet",
                 ),
-                const IconNLabel(
+                IconNLabel(
                   svgPath: 'lib/assets/icons/transfer.svg',
                   label: "Transfer",
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const TransferPage()));
+                  },
                 ),
                 IconNLabel(
                   svgPath: 'lib/assets/icons/money.svg',
