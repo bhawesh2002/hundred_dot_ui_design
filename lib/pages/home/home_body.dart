@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_from_card.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/charity_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_bill.dart';
@@ -43,12 +44,18 @@ class HomeBody extends StatelessWidget {
             dimension: UiSizes.heightPercent(2),
           ),
           //Hundred Dot Visa Card
-          Container(
-            height: UiSizes.heightPercent(22),
-            width: UiSizes.widthPercent(90),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(UiSizes.widthPercent(10)),
-              gradient: AppColors.linearGradient,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const AccountBalanceFromCard()));
+            },
+            child: Container(
+              height: UiSizes.heightPercent(22),
+              width: UiSizes.widthPercent(90),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(UiSizes.widthPercent(10)),
+                gradient: AppColors.linearGradient,
+              ),
             ),
           ),
           SizedBox.square(
