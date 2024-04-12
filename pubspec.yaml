@@ -33,6 +33,7 @@ flutter:
     - lib/assets/icons/plus.svg
     - lib/assets/icons/filter.svg
     - lib/assets/icons/search.svg
+    - lib/assets/icons/camera.svg
     - lib/assets/Images/QR-Code.png
   fonts:
     - family: HelveticaNeue
