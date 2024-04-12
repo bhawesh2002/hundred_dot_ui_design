@@ -10,7 +10,7 @@ class AppColors {
   static const Color additionalYellow = Color(0xFFF9DD4B);
   static const Color whiteColor = Colors.white;
   static const Color blackColor = Colors.black;
-  static const Color scaffoldBgColor = Color.fromARGB(255, 238, 238, 238);
+  static const Color scaffoldBgColor = Color.fromARGB(255, 245, 245, 245);
   static const LinearGradient linearGradient = LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
