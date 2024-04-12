@@ -4,6 +4,7 @@ import 'package:hundred_dot_ui_design/pages/home/home_body/account_balance_page.
 import 'package:hundred_dot_ui_design/pages/home/home_body/charity_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_bill.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/phone_charge.dart';
+import 'package:hundred_dot_ui_design/pages/home/home_body/qr_code_page.dart';
 import 'package:hundred_dot_ui_design/pages/home/home_body/transfer_page.dart';
 import 'package:hundred_dot_ui_design/theme/colors.dart';
 import 'package:hundred_dot_ui_design/utilis/ui_sizes.dart';
@@ -25,7 +26,9 @@ class HomeBody extends StatelessWidget {
         navigationPage: AccountBalancePage(),
       ),
       const CategoryItem(
-          label: "QR Code", svgIconPath: "lib/assets/icons/full_screen.svg"),
+          label: "QR Code",
+          svgIconPath: "lib/assets/icons/full_screen.svg",
+          navigationPage: QRCodePage()),
       const CategoryItem(
           label: "Charity",
           svgIconPath: "lib/assets/icons/heart.svg",
