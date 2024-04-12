@@ -14,5 +14,5 @@ class AppColors {
   static const LinearGradient linearGradient = LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
-      colors: [additionalwhite, secondary]);
+      colors: [additionalwhite, whiteColor, secondary]);
 }
